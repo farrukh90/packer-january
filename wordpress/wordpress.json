@@ -11,7 +11,7 @@
       "region": "{{user `region`}}",
       "source_ami": "{{user `ami`}}",
       "instance_type": "{{user `instance_type`}}",
-      "ssh_username": "{{user `ec2-user`}}",
+      "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "wordpress-{{user `wordpress_version`}}"
     }],
     "provisioners": [
