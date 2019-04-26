@@ -1,13 +1,12 @@
 {
    "variables": {
-     "wordpress_version": "",
      "instance_type": ""
     },
     "builders": [{
       "type": "amazon-ebs",
       "region": "us-east-1",
       "source_ami": "ami-0de53d8956e8dcf80",
-      "instance_type": "{{instance_type}}",
+      "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ec2-user",
       "ami_name": "wordpress-{{timestamp}}"
     }],
