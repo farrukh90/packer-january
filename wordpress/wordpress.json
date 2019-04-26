@@ -20,7 +20,7 @@
           "sudo yum install mysql mariadb-server httpd -y",
           "sudo yum install wget -y",
           "sudo wget https://wordpress.org/wordpress-{{user `wordpress_version`}}.zip",
-          "sudo unzip  {{user `wordpress_version`}}.zip",
+          "sudo unzip  wordpress-{{user `wordpress_version`}}.zip",
           "sudo rsync -avP ~/wordpress/ /var/www/html/",
           "sudo chown -R apache:apache /var/www/html/*",
           "sudo systemctl enable httpd"
